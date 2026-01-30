@@ -12,7 +12,7 @@
         C_alpha: C_alpha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp APOSTROPHE &kp C>;
+            bindings = <&kp RIGHT_ALT &kp COMMA &kp C>;
             label = "C_ALPHA";
         };
     };
