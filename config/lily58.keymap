@@ -15,6 +15,20 @@
             bindings = <&kt RIGHT_ALT &kp COMMA &kt RIGHT_ALT>;
             label = "C_ALPHA";
         };
+
+        single_quote: single_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE &kp SPACE>;
+            label = "SINGLE_QUOTE";
+        };
+
+        double_quote: dable_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES &kp SPACE>;
+            label = "DABLE_QUOTE";
+        };
     };
 
     keymap {
@@ -50,11 +64,11 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &trans        &trans        &trans    &trans      &trans                       &trans     &trans     &trans           &trans    &trans    &trans
-&trans  &kp ASTERISK  &kp F3        &kp F4    &kp F5      &kp F6                       &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &trans
-&trans  &kp EXCL      &kp AT        &kp HASH  &kp DOLLAR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &trans
-&trans  &kp SLASH     &kp NUMBER_1  &trans    &trans      &trans     &none     &tog 1  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &trans
-                                    &trans    &none       &trans     &trans    &trans  &trans     &trans     &trans
+&trans  &trans           &trans           &trans           &trans           &trans                          &trans           &trans          &trans     &trans         &trans             &trans
+&trans  &kp ASTRK        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL                    &kp EXCLAMATION  &kp GRAVE       &kp CARET  &double_quote  &kp BACKSLASH      &trans
+&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS                        &kp QUESTION     &kp APOSTROPHE  &kp TILDE  &single_quote  &kp RIGHT_BRACKET  &trans
+&trans  &kp SLASH        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS  &none     &tog 1  &kp PERCENT      &kp DOLLAR      &kp HASH   &kp PIPE       &kp AMPERSAND      &trans
+                                          &trans           &none            &trans        &trans    &trans  &trans           &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
