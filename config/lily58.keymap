@@ -32,6 +32,15 @@
         };
     };
 
+    behaviors {
+        tap_bluetooth: tap_bluetooth {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_BLUETOOTH";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_CLR>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -85,11 +94,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans                        &trans          &trans          &trans        &trans           &trans                &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR                    &kp PAGE_UP     &kp PAGE_UP     &kp HOME      &kp END          &kp C_VOLUME_UP       &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp LEFT_PARENTHESIS  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_PRV  &trans    &trans  &kp PAGE_DOWN   &kp PAGE_DOWN   &kp HOME      &kp END          &kp C_VOLUME_DOWN     &trans
-                         &trans   &trans   &trans      &trans    &trans  &trans          &none           &trans
+&trans  &trans  &trans   &trans   &trans   &trans                            &trans          &trans          &trans        &trans           &trans                &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &tap_bluetooth                    &kp PAGE_UP     &kp PAGE_UP     &kp HOME      &kp END          &kp C_VOLUME_UP       &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT                        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp LEFT_PARENTHESIS  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_PRV      &trans    &trans  &kp PAGE_DOWN   &kp PAGE_DOWN   &kp HOME      &kp END          &kp C_VOLUME_DOWN     &trans
+                         &trans   &trans   &trans          &trans    &trans  &trans          &none           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
