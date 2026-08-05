@@ -48,6 +48,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        EFT {
+            bindings = <&mo 3>;
+            key-positions = <42 43>;
+        };
+
+        Reset {
+            bindings = <&mo 0>;
+            key-positions = <0 11>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -104,7 +118,7 @@
 &trans  &trans  &trans   &trans   &trans   &trans                            &trans          &trans          &trans                &trans                 &trans             &trans
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &tap_bluetooth                    &kp PAGE_UP     &kp PAGE_UP     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp C_VOLUME_UP    &trans
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT                        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW          &kp RIGHT_ARROW        &kp K_MUTE         &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_PRV      &tog 0    &tog 3  &kp PAGE_DOWN   &kp PAGE_DOWN   &kp HOME              &kp END                &kp C_VOLUME_DOWN  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_PRV      &trans    &trans  &kp PAGE_DOWN   &kp PAGE_DOWN   &kp HOME              &kp END                &kp C_VOLUME_DOWN  &trans
                          &trans   &trans   &trans          &trans    &trans  &trans          &none           &trans
             >;
 
