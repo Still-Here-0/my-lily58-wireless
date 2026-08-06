@@ -52,12 +52,12 @@
         compatible = "zmk,combos";
 
         EFT {
-            bindings = <&mo 3>;
+            bindings = <&to 3>;
             key-positions = <42 43>;
         };
 
         Reset {
-            bindings = <&mo 0>;
+            bindings = <&to 0>;
             key-positions = <0 11>;
         };
     };
